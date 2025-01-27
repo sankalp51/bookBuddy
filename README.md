@@ -27,17 +27,17 @@ Ensure you have the following installed:
 
 1. Clone the repository:
 
-   ``bash
+   ``
    git clone https://github.com/yourusername/bookbuddy.git
    cd bookbuddy
    ``
 
 2. Install dependencies:
 
-   ``bash
+   ``
    pnpm install``
    # or
-   ``bash
+   ``
    yarn install
    ``
 
@@ -45,10 +45,10 @@ Ensure you have the following installed:
 
 Start the development server:
 
-``bash
+``
 pnpm run dev``
 # or
-``bash
+``
 yarn dev
 ``
 
