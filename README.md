@@ -35,8 +35,9 @@ Ensure you have the following installed:
 2. Install dependencies:
 
    ``bash
-   pnpm install
+   pnpm install``
    # or
+   ``bash
    yarn install
    ``
 
@@ -45,8 +46,9 @@ Ensure you have the following installed:
 Start the development server:
 
 ``bash
-pnpm run dev
+pnpm run dev``
 # or
+``bash
 yarn dev
 ``
 
