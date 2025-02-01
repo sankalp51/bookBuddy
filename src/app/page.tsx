@@ -1,7 +1,8 @@
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { BookOpen, BookmarkIcon, TrendingUp } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 export default function LandingPage() {
   return (
@@ -20,9 +21,15 @@ export default function LandingPage() {
                 </p>
               </div>
               <div className="w-full max-w-md space-y-2">
-                <form className=" flex flex-col items-center space-x-2">
-                  <Button className="w-full sm:w-[200px]">Get Started</Button>
-                </form>
+                <Link
+                  href="/home"
+                  className={cn(
+                    buttonVariants({ variant: "default" }),
+                    "w-full sm:w-[200px]"
+                  )}
+                >
+                  Get Started
+                </Link>
                 <p className="text-xs text-gray-500 dark:text-gray-400">
                   Start with a book you love. We'll handle the rest.
                 </p>

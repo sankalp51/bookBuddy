@@ -3,18 +3,19 @@ import Link from "next/link";
 import ThemeToggle from "./ThemeToggle";
 import { auth, signIn, signOut } from "@/auth";
 import { Button } from "./ui/button";
+import SignoutModal from "./SignoutModal";
 
 export default async function Header() {
   const session = await auth();
+
   return (
     <header className="px-4 lg:px-6 h-14 flex items-center justify-between">
-      <Link className="flex items-center justify-center" href="#">
+      <Link className="flex items-center justify-center" href="/">
         <BookOpen className="h-6 w-6" />
-        <span className="ml-2 text-2xl hidden sm:block font-bold">
-          BookBuddy
-        </span>
+        <span className="ml-2 text-xl sm:text-2xl font-bold">BookBuddy</span>
       </Link>
-      <div className="flex justify-center items-center">
+
+      <div className="flex justify-center items-center space-x-2">
         {!session?.user && (
           <form
             action={async () => {
@@ -25,16 +26,9 @@ export default async function Header() {
             <Button>Sign in</Button>
           </form>
         )}
-        {session?.user && (
-          <form
-            action={async () => {
-              "use server";
-              await signOut({ redirectTo: "/" });
-            }}
-          >
-            <Button variant={"destructive"}>Sign out</Button>
-          </form>
-        )}
+
+        {session?.user && <SignoutModal />}
+
         <ThemeToggle />
       </div>
     </header>

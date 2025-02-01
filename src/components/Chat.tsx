@@ -15,7 +15,7 @@ import {
 } from "@/components/ui/card";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Ban, Bot,  Send, User } from "lucide-react";
+import { Ban, Bot, Send, User } from "lucide-react";
 
 export default function Chat() {
   const { messages, input, handleInputChange, handleSubmit, stop, isLoading } =
@@ -31,7 +31,7 @@ export default function Chat() {
   return (
     <Card className="mx-auto w-full h-full flex flex-col">
       <CardHeader>
-        <CardTitle>AI Chat</CardTitle>
+        <CardTitle>Find your desired book</CardTitle>
       </CardHeader>
 
       <CardContent className="flex-1 overflow-hidden">
