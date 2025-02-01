@@ -1,4 +1,5 @@
 import { auth } from "@/auth";
+import Chat from "@/components/Chat";
 import { redirect } from "next/navigation";
 
 export default async function page() {
@@ -7,8 +8,8 @@ export default async function page() {
     redirect("/");
   }
   return (
-    <section>
-      <h1>welcome</h1>
-    </section>
+    <main className="h-dvh">
+      <Chat />
+    </main>
   );
 }
