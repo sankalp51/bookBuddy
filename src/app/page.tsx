@@ -19,14 +19,9 @@ export default function LandingPage() {
                   Start your reading journey today!
                 </p>
               </div>
-              <div className="w-full max-w-sm space-y-2">
-                <form className="flex space-x-2">
-                  <Input
-                    className="max-w-lg flex-1"
-                    placeholder="Enter your favorite book"
-                    type="text"
-                  />
-                  <Button type="submit">Get Started</Button>
+              <div className="w-full max-w-md space-y-2">
+                <form className=" flex flex-col items-center space-x-2">
+                  <Button className="w-full sm:w-[200px]">Get Started</Button>
                 </form>
                 <p className="text-xs text-gray-500 dark:text-gray-400">
                   Start with a book you love. We'll handle the rest.
