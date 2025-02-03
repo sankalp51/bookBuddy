@@ -35,7 +35,7 @@ export default function BookRecommendationChat() {
     Genre: ${genre}
     Mood: ${mood}
     Time Period: ${timePeriod}
-    Please provide a brief summary and explain why this book fits the criteria.`;
+    Please provide a small spoiler free summary of the book`;
     handleInputChange({
       target: { value: prompt },
     } as ChangeEvent<HTMLInputElement>);

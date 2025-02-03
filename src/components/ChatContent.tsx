@@ -45,7 +45,7 @@ export default function ChatContent({ messages }: Props) {
               <div
                 className={`rounded-lg p-3 ${
                   m.role === "user"
-                    ? "bg-primary text-primary-foreground"
+                    ? "bg-primary text-white"
                     : "bg-muted"
                 }`}
               >

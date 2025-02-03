@@ -30,7 +30,7 @@ export default function LandingPage() {
                   Get Started
                 </Link>
                 <p className="text-xs text-gray-500 dark:text-gray-400">
-                  Start with a book you love. We&appos;ll handle the rest.
+                  Start with a book you love. We&apos;ll handle the rest.
                 </p>
               </div>
             </div>
@@ -46,7 +46,7 @@ export default function LandingPage() {
                 </h2>
                 <p className="text-gray-500 dark:text-gray-400">
                   Our AI analyzes your reading history to suggest books
-                  you&appos;ll love.
+                  you&apos;ll love.
                 </p>
               </div>
               <div className="flex flex-col items-center space-y-4 text-center">
