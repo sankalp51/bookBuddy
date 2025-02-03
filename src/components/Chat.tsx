@@ -42,7 +42,7 @@ export default function BookRecommendationChat() {
   }, [genre, mood, timePeriod, handleInputChange]);
 
   return (
-    <Card className="mx-auto w-full max-w-2xl h-full flex flex-col">
+    <Card className="mx-auto w-full h-full flex flex-col">
       <CardHeader>
         <CardTitle className="text-center text-lg sm:text-xl">
           Find your desired book
