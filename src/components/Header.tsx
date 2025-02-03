@@ -1,7 +1,7 @@
 import { BookOpen } from "lucide-react";
 import Link from "next/link";
 import ThemeToggle from "./ThemeToggle";
-import { auth, signIn, signOut } from "@/auth";
+import { auth, signIn } from "@/auth";
 import { Button } from "./ui/button";
 import SignoutModal from "./SignoutModal";
 
