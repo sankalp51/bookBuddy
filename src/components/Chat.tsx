@@ -1,9 +1,8 @@
 "use client";
 
 import { useChat } from "ai/react";
-import { useRef, useEffect, useState, ChangeEvent } from "react";
-import Markdown from "react-markdown";
-import remarkGfm from "remark-gfm";
+import { useEffect, useState, ChangeEvent } from "react";
+
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -12,9 +11,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { ScrollArea } from "@/components/ui/scroll-area";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Ban, Bot, Send, User } from "lucide-react";
+import { Ban, Send } from "lucide-react";
 import {
   Select,
   SelectContent,
@@ -23,19 +20,15 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Input } from "@/components/ui/input";
+import ChatContent from "./ChatContent";
 
 export default function BookRecommendationChat() {
   const { messages, input, handleInputChange, handleSubmit, stop, isLoading } =
     useChat();
-  const bottomRef = useRef<HTMLDivElement>(null);
 
   const [genre, setGenre] = useState("");
   const [mood, setMood] = useState("");
   const [timePeriod, setTimePeriod] = useState("");
-
-  useEffect(() => {
-    bottomRef.current?.scrollIntoView({ behavior: "smooth" });
-  }, [messages]);
 
   useEffect(() => {
     const prompt = `Recommend a book with the following criteria:
@@ -55,54 +48,7 @@ export default function BookRecommendationChat() {
       </CardHeader>
 
       <CardContent className="flex-1 overflow-hidden">
-        <ScrollArea className="h-full pr-4">
-          <div className="space-y-4">
-            {messages.map((m) => (
-              <div
-                key={m.id}
-                className={`flex ${
-                  m.role === "user" ? "justify-end" : "justify-start"
-                }`}
-              >
-                <div
-                  className={`flex items-start space-x-2 ${
-                    m.role === "user"
-                      ? "flex-row-reverse space-x-reverse"
-                      : "flex-row"
-                  }`}
-                >
-                  <Avatar className="w-8 h-8">
-                    <AvatarFallback>
-                      {m.role === "user" ? <User /> : <Bot />}
-                    </AvatarFallback>
-                    <AvatarImage
-                      src={
-                        m.role === "user"
-                          ? "/user-avatar.png"
-                          : "/ai-avatar.png"
-                      }
-                    />
-                  </Avatar>
-                  <div
-                    className={`rounded-lg p-3 ${
-                      m.role === "user"
-                        ? "bg-primary text-primary-foreground"
-                        : "bg-muted"
-                    }`}
-                  >
-                    <Markdown
-                      remarkPlugins={[remarkGfm]}
-                      className="prose dark:prose-invert"
-                    >
-                      {m.content}
-                    </Markdown>
-                  </div>
-                </div>
-              </div>
-            ))}
-            <div ref={bottomRef} />
-          </div>
-        </ScrollArea>
+        <ChatContent messages={messages} />
       </CardContent>
 
       <CardFooter className="p-4">
