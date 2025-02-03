@@ -16,7 +16,6 @@ import { signOut } from "next-auth/react";
 export default function SignoutModal() {
   return (
     <AlertDialog>
-      {/* Use the AlertDialogTrigger to open the dialog */}
       <AlertDialogTrigger asChild>
         <Button className="bg-[#fff0f0] text-red-500 hover:bg-destructive/20 dark:bg-destructive/30">
           Sign out
@@ -25,14 +24,13 @@ export default function SignoutModal() {
 
       <AlertDialogContent>
         <AlertDialogHeader>
-          <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
+          <AlertDialogTitle>Sign out</AlertDialogTitle>
           <AlertDialogDescription>
-            This action will log you out of your account.
+            Are your sure you want to sign out?
           </AlertDialogDescription>
         </AlertDialogHeader>
         <AlertDialogFooter>
           <AlertDialogCancel>Cancel</AlertDialogCancel>
-          {/* Wrap the destructive action in a form that triggers the signOut server action */}
 
           <AlertDialogAction onClick={() => signOut()}>
             Sign out
