@@ -35,25 +35,27 @@ export default function BookRecommendationChat() {
     Genre: ${genre}
     Mood: ${mood}
     Time Period: ${timePeriod}
-    Please provide a small spoiler free summary of the book`;
+    Please provide a small spoiler-free summary of the book.`;
     handleInputChange({
       target: { value: prompt },
     } as ChangeEvent<HTMLInputElement>);
   }, [genre, mood, timePeriod, handleInputChange]);
 
   return (
-    <Card className="mx-auto w-full h-full flex flex-col">
+    <Card className="mx-auto w-full max-w-2xl h-full flex flex-col">
       <CardHeader>
-        <CardTitle>Find your desired book</CardTitle>
+        <CardTitle className="text-center text-lg sm:text-xl">
+          Find your desired book
+        </CardTitle>
       </CardHeader>
 
-      <CardContent className="flex-1 overflow-hidden">
+      <CardContent className="flex-1 overflow-auto">
         <ChatContent messages={messages} />
       </CardContent>
 
       <CardFooter className="p-4">
         <form onSubmit={handleSubmit} className="w-full space-y-4">
-          <div className="flex space-x-4">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             <Select onValueChange={setGenre}>
               <SelectTrigger className="w-full">
                 <SelectValue placeholder="Select genre" />
