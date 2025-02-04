@@ -80,9 +80,12 @@ export default function LandingPage() {
                   favorites with BookBuddy.
                 </p>
               </div>
-              <Button className="w-full sm:w-auto" size="lg">
+              <Link
+                href="/auth/signin"
+                className={cn(buttonVariants({size:"lg"}), "w-full sm:w-auto")}
+              >
                 Sign Up for Free
-              </Button>
+              </Link>
             </div>
           </div>
         </section>

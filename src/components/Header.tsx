@@ -1,9 +1,10 @@
 import { BookOpen } from "lucide-react";
 import Link from "next/link";
 import ThemeToggle from "./ThemeToggle";
-import { auth, signIn } from "@/auth";
-import { Button } from "./ui/button";
+import { auth } from "@/auth";
+import { buttonVariants } from "./ui/button";
 import SignoutModal from "./SignoutModal";
+import { cn } from "@/lib/utils";
 
 export default async function Header() {
   const session = await auth();
@@ -17,14 +18,9 @@ export default async function Header() {
 
       <div className="flex justify-center items-center space-x-2">
         {!session?.user && (
-          <form
-            action={async () => {
-              "use server";
-              await signIn("google", { redirectTo: "/home" });
-            }}
-          >
-            <Button>Sign in</Button>
-          </form>
+          <Link href="/auth/signin" className={cn(buttonVariants())}>
+            Sign in
+          </Link>
         )}
 
         {session?.user && <SignoutModal />}
