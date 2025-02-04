@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Button, buttonVariants } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import { BookOpen, BookmarkIcon, TrendingUp } from "lucide-react";
 import { cn } from "@/lib/utils";
 

@@ -14,7 +14,7 @@ export default function NotFoundPage() {
               Oops! Page Not Found
             </h1>
             <p className="max-w-[600px] text-gray-500 md:text-xl dark:text-gray-400">
-              The page you're looking for doesn't exist or has been moved. Let's
+              The page you&apos;re looking for doesn&apos;t exist or has been moved. Let&apos;s
               get you back on track.
             </p>
             <div className="w-full max-w-md space-y-2">
