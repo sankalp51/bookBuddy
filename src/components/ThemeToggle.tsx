@@ -20,7 +20,13 @@ export default function ThemeToggle() {
   }
 
   return (
-    <Button className={cn(buttonVariants({variant:"outline"}),"bg-transparent dark:text-white text-black bg-none border-none shadow-none hover:bg-transparent")} onClick={() => setTheme(theme === "light" ? "dark" : "light")}>
+    <Button
+      className={cn(
+        buttonVariants({ variant: "outline" }),
+        "bg-transparent dark:text-white text-black bg-none border-none shadow-none hover:bg-transparent"
+      )}
+      onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+    >
       {theme === "light" ? <Moon /> : <Sun />}
     </Button>
   );
