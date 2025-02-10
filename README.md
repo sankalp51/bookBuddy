@@ -83,7 +83,8 @@ Open [`http://localhost:3000`](http://localhost:3000) in your browser to see the
 ## Learn More
 
 - [Next.js Documentation](https://nextjs.org/docs): Learn about `Next.js` features.
-- [NextAuth.js Documentation](https://next-auth.js.org/getting-started/introduction): Manage authentication in `BookBuddy`.
+- [Auth.js Documentation](https://authjs.dev/getting-started/installation?framework=next-js): Manage authentication in `BookBuddy`.
+- [Vercel AI sdk Documentation](https://sdk.vercel.ai/docs/getting-started/nextjs-app-router): AI sdk by Vercel with Next.js.
 
 ---
 
