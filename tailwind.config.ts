@@ -56,6 +56,32 @@ export default {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      keyframes: {
+        rotate: {
+          "100%": { transform: "rotate(360deg)" },
+        },
+        prixClipFix: {
+          "0%": { clipPath: "polygon(50% 50%, 0 0, 0 0, 0 0, 0 0, 0 0)" },
+          "25%": {
+            clipPath: "polygon(50% 50%, 0 0, 100% 0, 100% 0, 100% 0, 100% 0)",
+          },
+          "50%": {
+            clipPath:
+              "polygon(50% 50%, 0 0, 100% 0, 100% 100%, 100% 100%, 100% 100%)",
+          },
+          "75%": {
+            clipPath:
+              "polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%)",
+          },
+          "100%": {
+            clipPath: "polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 0)",
+          },
+        },
+      },
+      animation: {
+        rotate: "rotate 1s linear infinite",
+        prixClipFix: "prixClipFix 2s linear infinite",
+      },
     },
   },
   plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
