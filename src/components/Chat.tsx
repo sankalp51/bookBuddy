@@ -97,8 +97,8 @@ export default function BookRecommendationChat() {
                 <SelectItem value="futuristic">Futuristic</SelectItem>
               </SelectContent>
             </Select>
-            <Textarea rows={5} maxLength={100} />
           </div>
+          <Textarea rows={5} maxLength={100} />
 
           <Input type="hidden" value={input} onChange={handleInputChange} />
 
