@@ -2,6 +2,7 @@
 
 import { useChat } from "ai/react";
 import { useEffect, useState, ChangeEvent } from "react";
+import { Textarea } from "./ui/textarea";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -96,6 +97,7 @@ export default function BookRecommendationChat() {
                 <SelectItem value="futuristic">Futuristic</SelectItem>
               </SelectContent>
             </Select>
+            <Textarea rows={5} maxLength={100} />
           </div>
 
           <Input type="hidden" value={input} onChange={handleInputChange} />
