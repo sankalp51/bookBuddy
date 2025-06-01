@@ -2,7 +2,6 @@
 
 import { useChat } from "ai/react";
 import { useEffect, useState, ChangeEvent } from "react";
-import { Textarea } from "./ui/textarea";
 
 import { Button } from "@/components/ui/button";
 import {
